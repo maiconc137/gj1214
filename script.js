@@ -1,11 +1,13 @@
 const blocos = document.querySelectorAll(".bloco");
 const nextBtns = document.querySelectorAll(".nextBtn");
 
-// Cada clique revela o próximo, mas mantém os anteriores
+// Cada clique revela o próximo bloco e mantém os anteriores visíveis
 nextBtns.forEach((btn, index) => {
   btn.addEventListener("click", () => {
-    blocos[index + 1].classList.remove("hidden");
-    btn.style.display = "none"; // esconde o botão já clicado
+    if (index + 1 < blocos.length) {
+      blocos[index + 1].classList.remove("hidden");
+      btn.style.display = "none"; // esconde o botão já clicado
+    }
   });
 });
 
@@ -25,9 +27,26 @@ document.querySelector(".yes").addEventListener("click", () => {
   </div>`;
 });
 
-// Botão NÃO foge
-document.querySelector(".no").addEventListener("mouseover", (e) => {
-  e.target.style.position = "absolute";
-  e.target.style.top = Math.random() * window.innerHeight * 0.7 + "px";
-  e.target.style.left = Math.random() * window.innerWidth * 0.7 + "px";
+// Botão NÃO foge (desktop + celular)
+const noBtn = document.querySelector(".no");
+let attempts = 0;
+
+function moveNoBtn() {
+  attempts++;
+  const maxWidth = window.innerWidth * 0.8;
+  const maxHeight = window.innerHeight * 0.8;
+
+  noBtn.style.position = "absolute";
+  noBtn.style.top = Math.random() * maxHeight + "px";
+  noBtn.style.left = Math.random() * maxWidth + "px";
+
+  // diminui o botão a cada tentativa
+  const scale = Math.max(0.6, 1 - attempts * 0.1);
+  noBtn.style.transform = `scale(${scale})`;
+}
+
+noBtn.addEventListener("mouseover", moveNoBtn);
+noBtn.addEventListener("touchstart", (e) => {
+  e.preventDefault();
+  moveNoBtn();
 });
