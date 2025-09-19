@@ -50,3 +50,4 @@ noBtn.addEventListener("touchstart", (e) => {
   e.preventDefault();
   moveNoBtn();
 });
+
