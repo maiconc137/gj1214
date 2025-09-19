@@ -3,45 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Um Site Diferente...</title>
+  <title>Um convite especial</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <section class="intro">
-      <h1>Oi, você! 👀</h1>
-      <p>Sim, este site é só pra você. (E não, não é golpe... ainda 😅)</p>
+
+    <section class="bloco active">
+      <p>Às vezes, a vida pode ser dita de forma diferente.  
+      Hoje resolvi escrever sem papel.</p>
+      <button class="nextBtn">Próximo ➜</button>
     </section>
 
-    <section class="curiosidade hidden">
-      <h2>Curiosidade</h2>
-      <p>Se você está aqui, é porque alguém gosta muito de você.<br>
-      Spoiler: esse alguém sou eu 🙋‍♂️</p>
+    <section class="bloco hidden">
+      <p>Esses dias contigo têm sido incríveis. 
+         Estou muito feliz em estar te conhecendo </p>
+      <button class="nextBtn">Próximo ➜</button>
     </section>
 
-    <section class="fofura hidden">
-      <h2>Confissão</h2>
-      <p>Eu pensei em mil jeitos de dizer o que sinto...  
-      mas achei que um site seria mais a minha cara (nerd style 🤓).</p>
+    <section class="bloco hidden">
+      <p>Mas enfim, estava pensando aqui e</p>
+      <button class="nextBtn"> ➜</button>
     </section>
 
-    <section class="final hidden">
-      <h2>Agora é sério</h2>
-      <p>Chegou a hora de clicar no botão abaixo. Mas cuidado: pode mudar sua vida 💘</p>
-      <button id="pedidoBtn">Clique aqui</button>
+    <section class="bloco hidden">
+      <h2>Hummmmmmm</h2>
+      <p>Acho que está mais do que na hora de pegar essa gatinha pra mim...</p>
+      <button id="pedidoBtn">Descobrir</button>
     </section>
 
+    <!-- Popup final -->
     <div class="overlay hidden" id="overlay">
       <div class="popup">
         <h2>Quer namorar comigo? ❤️</h2>
         <div class="actions">
-          <button class="yes">SIM 😍</button>
-          <button class="no">NÃO 😭</button>
+          <button class="yes">Sim, quero!</button>
+          <button class="no">Deixa eu pensar... 🤔</button>
         </div>
       </div>
     </div>
-  </div>
 
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

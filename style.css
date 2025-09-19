@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  color: #046307; /* Verde lésbico */
+}
+
+.container {
+  max-width: 600px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  padding: 40px 25px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.bloco {
+  margin-bottom: 40px;
+  animation: fadeIn 0.8s ease;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #046307;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #046307;
+  color: #fff;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #034b05;
+  transform: scale(1.05);
+}
+
+/* Popup */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
